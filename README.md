@@ -77,7 +77,7 @@ This repository intentionally does **not** share:
 ## What is intentionally not included
 
 - The broader private `remotion-motion-lab` environment
-- Other experiments unrelated to these two recipes
+- Other experiments unrelated to these published recipes
 - Original source media used by other creators
 - Side-by-side source-vs-recreation comparison boards
 

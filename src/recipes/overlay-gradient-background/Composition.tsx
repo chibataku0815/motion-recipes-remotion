@@ -163,7 +163,7 @@ const renderPanelSource = ({
   mode: "single" | "stack";
 }) => {
   const surface = getCanvas(
-    `46-overlay-surface-${mode}`,
+    `overlay-gradient-surface-${mode}`,
     config.internalWidth,
     config.internalHeight,
   );
@@ -199,7 +199,7 @@ const renderPanelSource = ({
 
   activeLayers.forEach((layer, index) => {
     const layerCanvas = getCanvas(
-      `46-overlay-layer-${mode}-${index}`,
+      `overlay-gradient-layer-${mode}-${index}`,
       config.internalWidth,
       config.internalHeight,
     );
