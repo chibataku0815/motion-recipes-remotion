@@ -79,6 +79,10 @@ export default defineConfig({
       input: {
         landing: path.resolve(__dirname, "site/index.html"),
         echo: path.resolve(__dirname, "site/recipes/echo-dither-trail/index.html"),
+        echoTextTrain: path.resolve(
+          __dirname,
+          "site/recipes/echo-text-train/index.html",
+        ),
         overlayGradient: path.resolve(
           __dirname,
           "site/recipes/overlay-gradient-background/index.html",
@@ -98,6 +102,10 @@ export default defineConfig({
         trim: path.resolve(
           __dirname,
           "site/recipes/trim-paths-radial-burst/index.html",
+        ),
+        textPathMorphing: path.resolve(
+          __dirname,
+          "site/recipes/text-path-morphing/index.html",
         ),
       },
     },
