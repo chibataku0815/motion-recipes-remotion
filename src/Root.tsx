@@ -16,6 +16,8 @@ import { AETipTextPathMorphing } from "./recipes/text-path-morphing/Composition"
 import { config as textPathMorphingConfig } from "./recipes/text-path-morphing/config";
 import { TrimPathsRadialBurst } from "./recipes/trim-paths-radial-burst/Composition";
 import { config as trimPathsRadialBurstConfig } from "./recipes/trim-paths-radial-burst/config";
+import { AETipBubblePopSilhouetteBurst } from "./recipes/bubble-pop-silhouette-burst/Composition";
+import { config as bubblePopSilhouetteBurstConfig } from "./recipes/bubble-pop-silhouette-burst/config";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -83,6 +85,14 @@ export const RemotionRoot: React.FC = () => {
         fps={textPathMorphingConfig.fps}
         width={textPathMorphingConfig.width}
         height={textPathMorphingConfig.height}
+      />
+      <Composition
+        id="AETipBubblePopSilhouetteBurst"
+        component={AETipBubblePopSilhouetteBurst}
+        durationInFrames={bubblePopSilhouetteBurstConfig.totalFrames}
+        fps={bubblePopSilhouetteBurstConfig.fps}
+        width={bubblePopSilhouetteBurstConfig.width}
+        height={bubblePopSilhouetteBurstConfig.height}
       />
     </>
   );

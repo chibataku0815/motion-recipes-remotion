@@ -107,6 +107,10 @@ export default defineConfig({
           __dirname,
           "site/recipes/text-path-morphing/index.html",
         ),
+        bubblePopSilhouetteBurst: path.resolve(
+          __dirname,
+          "site/recipes/bubble-pop-silhouette-burst/index.html",
+        ),
       },
     },
   },

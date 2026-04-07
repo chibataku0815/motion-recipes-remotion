@@ -50,6 +50,7 @@ bun run render:49
 bun run render:50
 bun run render:56
 bun run render:57
+bun run render:58
 ```
 
 ## Recipes
@@ -57,6 +58,7 @@ bun run render:57
 | Recipe | Code | Doc |
 |---|---|---|
 | Text Path Morphing | [`src/recipes/text-path-morphing`](./src/recipes/text-path-morphing) | [`docs/recipes/text-path-morphing.md`](./docs/recipes/text-path-morphing.md) |
+| Bubble Pop Silhouette Burst | [`src/recipes/bubble-pop-silhouette-burst`](./src/recipes/bubble-pop-silhouette-burst) | [`docs/recipes/bubble-pop-silhouette-burst.md`](./docs/recipes/bubble-pop-silhouette-burst.md) |
 | Echo Dither Trail | [`src/recipes/echo-dither-trail`](./src/recipes/echo-dither-trail) | [`docs/recipes/echo-dither-trail.md`](./docs/recipes/echo-dither-trail.md) |
 | Echo Text Train | [`src/recipes/echo-text-train`](./src/recipes/echo-text-train) | [`docs/recipes/echo-text-train.md`](./docs/recipes/echo-text-train.md) |
 | Overlay Gradient Background | [`src/recipes/overlay-gradient-background`](./src/recipes/overlay-gradient-background) | [`docs/recipes/overlay-gradient-background.md`](./docs/recipes/overlay-gradient-background.md) |

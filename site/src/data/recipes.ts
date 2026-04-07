@@ -28,6 +28,62 @@ const repoRoot = "https://github.com/chibataku0815/motion-recipes-remotion";
 
 export const recipes: RecipePageData[] = [
   {
+    slug: "bubble-pop-silhouette-burst",
+    title: {
+      en: "Bubble Pop Silhouette Burst",
+      ja: "Bubble Pop Silhouette Burst",
+    },
+    tagline: {
+      en: "Silhouette alpha punch-out + print-textured membrane breakup",
+      ja: "silhouette alpha punch-out + print-textured membrane breakup",
+    },
+    technique: {
+      en: "This recipe treats a bubble pop as mask-driven membrane removal rather than opacity fade. Expanding punch circles cut through the object, a short-lived turbulent displacement roughens the impact, and residual arcs and membrane shards hold the read after the main shell has already disappeared.",
+      ja: "このレシピでは、bubble pop を opacity fade ではなく、mask 駆動の膜除去として扱います。拡大する punch circle が object を切り抜き、短時間の turbulent displacement が衝突感を荒らし、主殻が消えた後も residual arc と membrane shard が読みを支えます。",
+    },
+    summary: {
+      en: "It combines silhouette alpha logic, impact-only distortion, residue design, and neo-brutalist editorial print texture so the pop reads like torn printed material instead of a clean vector vanish.",
+      ja: "silhouette alpha ロジック、impact 専用 distortion、residue 設計、neo-brutalist editorial な print texture を組み合わせ、clean な vector vanish ではなく、刷り物が破れたような pop にしています。",
+    },
+    corePrimitives: [
+      "expanding punch mask circles",
+      "impact-only turbulent displacement",
+      "residue arcs and membrane shard field",
+      "editorial poster frame and sidebar system",
+    ],
+    parameters: [
+      "punchDurationFrames",
+      "dissolveDurationFrames",
+      "distortionPeak",
+      "roughDurationFrames",
+      "ringEndRadius",
+      "debrisDurationFrames",
+      "halftoneDotSize",
+      "halftoneOpacity",
+      "printDirtOpacity",
+    ],
+    previewVideoPath: "media/bubble-pop-silhouette-burst/58-preview.mp4",
+    stillPaths: [
+      "media/bubble-pop-silhouette-burst/frame-048.png",
+      "media/bubble-pop-silhouette-burst/frame-084.png",
+      "media/bubble-pop-silhouette-burst/frame-128.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/bubble-pop-silhouette-burst`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/bubble-pop-silhouette-burst.md`,
+    inspiration: {
+      label: {
+        en: "AE-style short tip about a bubble popping through silhouette alpha and roughened distortion",
+        ja: "silhouette alpha と roughened distortion で bubble を割る AE 系ショート tip",
+      },
+      url: "https://www.youtube.com/shorts/7PIU9DMQBYk",
+      note: {
+        en: "The public recipe keeps the punch-out logic and breakup timing, but reinterprets the object as a modular editorial poster study instead of a photoreal soap bubble.",
+        ja: "公開版レシピは、punch-out logic と breakup timing を保ちつつ、写実的な soap bubble ではなく、modular editorial poster study として再解釈しています。",
+      },
+    },
+    status: "Published",
+  },
+  {
     slug: "text-path-morphing",
     title: {
       en: "Text Path Morphing",
