@@ -80,6 +80,113 @@ export const recipes: RecipePageData[] = [
     status: "Published",
   },
   {
+    slug: "overlay-gradient-background",
+    title: {
+      en: "Overlay Gradient Background",
+      ja: "Overlay Gradient Background",
+    },
+    tagline: {
+      en: "Soft wipe + layered gradient drift + light turbulent warp",
+      ja: "ソフトワイプ + 多層グラデーションの漂い + 軽い歪み",
+    },
+    technique: {
+      en: "A full-screen gradient sheet rotates through a wide feathered wipe, then duplicates into a phased stack so the color field keeps drifting instead of sitting as a static background.",
+      ja: "全画面のグラデーションシートが広いフェザー付きワイプとして回転し、それを位相ずれの stack に複製することで、静止背景ではなく流動する色面として読めるようにしています。",
+    },
+    summary: {
+      en: "This recipe separates soft directional alpha, layer-index angle offsets, and lightweight distortion so AE-like moving gradient depth can be inspected as code.",
+      ja: "このレシピでは、ソフトな方向性アルファ、レイヤー index ごとの角度差、軽量な distortion を分離し、AE ライクな動くグラデーションの奥行きをコードとして点検できるようにしています。",
+    },
+    corePrimitives: [
+      "renderGradientLayer",
+      "distortPoint",
+      "single-layer vs stack comparison layout",
+    ],
+    parameters: [
+      "layerCount",
+      "wipeFeatherPx",
+      "rotationSpeedDegPerSec",
+      "angleStepDeg",
+      "distortAmount",
+      "distortSize",
+      "layerPresence",
+    ],
+    previewVideoPath: "media/overlay-gradient-background/46-preview.mp4",
+    stillPaths: [
+      "media/overlay-gradient-background/frame-030.png",
+      "media/overlay-gradient-background/frame-090.png",
+      "media/overlay-gradient-background/frame-150.png",
+      "media/overlay-gradient-background/frame-180.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/overlay-gradient-background`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/overlay-gradient-background.md`,
+    inspiration: {
+      label: {
+        en: "AE tip study translated from private implementation notes",
+        ja: "私的な実装メモから翻訳した AE tip スタディ",
+      },
+      note: {
+        en: "The public recipe focuses on moving layered gradient logic instead of source-matched finishing details such as exact plugin output or color grading.",
+        ja: "公開版レシピは、厳密なプラグイン出力やカラーグレーディングではなく、動く多層グラデーションのロジックそのものに焦点を当てています。",
+      },
+    },
+    status: "Published",
+  },
+  {
+    slug: "now-loading-progress-bar",
+    title: {
+      en: "Now Loading Progress Bar",
+      ja: "Now Loading Progress Bar",
+    },
+    tagline: {
+      en: "Left-anchored fill + segmented timing + looped text blink",
+      ja: "左端起点の fill + segmented timing + ループする点滅",
+    },
+    technique: {
+      en: "A loader bar fills from the left edge instead of scaling from center, while stepped holds and a looped opacity pattern make the UI feel more like a game loading pass than a sterile linear tween.",
+      ja: "ローダーバーを中央拡大ではなく左端から埋め、途中の hold とループする opacity 点滅を組み合わせることで、単調な linear tween ではなくゲームらしい loading UI の読みを作っています。",
+    },
+    summary: {
+      en: "This recipe isolates anchor behavior, segmented progress timing, and label blinking so the loading read can be tuned without decorative effects.",
+      ja: "このレシピでは、アンカー挙動、segmented な進行タイミング、ラベルの点滅を分離し、装飾に頼らず loading 感そのものを調整できるようにしています。",
+    },
+    corePrimitives: [
+      "getSegmentedProgress",
+      "getBlinkOpacity",
+      "center-origin vs left-anchor comparison layout",
+    ],
+    parameters: [
+      "fillStops",
+      "fillDurationFrames",
+      "labelBlinkStepFrames",
+      "labelBlinkPattern",
+      "trackWidth",
+      "trackHeight",
+      "layoutOffsetY",
+    ],
+    previewVideoPath: "media/now-loading-progress-bar/49-preview.mp4",
+    stillPaths: [
+      "media/now-loading-progress-bar/frame-000.png",
+      "media/now-loading-progress-bar/frame-024.png",
+      "media/now-loading-progress-bar/frame-046.png",
+      "media/now-loading-progress-bar/frame-090.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/now-loading-progress-bar`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/now-loading-progress-bar.md`,
+    inspiration: {
+      label: {
+        en: "AE tip video about a game-style loading screen",
+        ja: "ゲーム風ロード画面を扱う AE tip 動画",
+      },
+      url: "https://www.youtube.com/watch?v=ncvjQvZip1I",
+      note: {
+        en: "The public recipe turns the source workflow into inspectable timing primitives and a comparison board instead of aiming for an exact frame clone.",
+        ja: "公開版レシピでは、元ワークフローを厳密再現するのではなく、点検可能な timing primitive と comparison board に変換しています。",
+      },
+    },
+    status: "Published",
+  },
+  {
     slug: "trim-paths-radial-burst",
     title: {
       en: "Trim Paths Radial Burst",

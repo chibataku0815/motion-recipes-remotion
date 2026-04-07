@@ -10,7 +10,7 @@ This repository is the code and documentation source for that site. It focuses o
 
 ## What this repo is
 
-- A compact Remotion app with two standalone motion recipes
+- A compact Remotion app with four standalone motion recipes
 - A GitHub Pages gallery for browsing previews and technique summaries
 - A public-facing subset extracted from a larger private R&D environment
 - An educational exploration of technique translation, not template redistribution
@@ -44,6 +44,8 @@ Render the included recipes:
 ```bash
 bun run render:44
 bun run render:45
+bun run render:46
+bun run render:49
 ```
 
 ## Recipes
@@ -51,6 +53,8 @@ bun run render:45
 | Recipe | Code | Doc |
 |---|---|---|
 | Echo Dither Trail | [`src/recipes/echo-dither-trail`](./src/recipes/echo-dither-trail) | [`docs/recipes/echo-dither-trail.md`](./docs/recipes/echo-dither-trail.md) |
+| Overlay Gradient Background | [`src/recipes/overlay-gradient-background`](./src/recipes/overlay-gradient-background) | [`docs/recipes/overlay-gradient-background.md`](./docs/recipes/overlay-gradient-background.md) |
+| Now Loading Progress Bar | [`src/recipes/now-loading-progress-bar`](./src/recipes/now-loading-progress-bar) | [`docs/recipes/now-loading-progress-bar.md`](./docs/recipes/now-loading-progress-bar.md) |
 | Trim Paths Radial Burst | [`src/recipes/trim-paths-radial-burst`](./src/recipes/trim-paths-radial-burst) | [`docs/recipes/trim-paths-radial-burst.md`](./docs/recipes/trim-paths-radial-burst.md) |
 
 ## Attribution / Inspiration

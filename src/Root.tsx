@@ -2,6 +2,10 @@ import React from "react";
 import { Composition } from "remotion";
 import { EchoDitherTrail } from "./recipes/echo-dither-trail/Composition";
 import { config as echoDitherTrailConfig } from "./recipes/echo-dither-trail/config";
+import { AETipOverlayGradientBackground } from "./recipes/overlay-gradient-background/Composition";
+import { config as overlayGradientBackgroundConfig } from "./recipes/overlay-gradient-background/config";
+import { AETipNowLoadingProgressBar } from "./recipes/now-loading-progress-bar/Composition";
+import { config as nowLoadingProgressBarConfig } from "./recipes/now-loading-progress-bar/config";
 import { TrimPathsRadialBurst } from "./recipes/trim-paths-radial-burst/Composition";
 import { config as trimPathsRadialBurstConfig } from "./recipes/trim-paths-radial-burst/config";
 
@@ -23,6 +27,22 @@ export const RemotionRoot: React.FC = () => {
         fps={trimPathsRadialBurstConfig.fps}
         width={trimPathsRadialBurstConfig.width}
         height={trimPathsRadialBurstConfig.height}
+      />
+      <Composition
+        id="AETipOverlayGradientBackground"
+        component={AETipOverlayGradientBackground}
+        durationInFrames={overlayGradientBackgroundConfig.totalFrames}
+        fps={overlayGradientBackgroundConfig.fps}
+        width={overlayGradientBackgroundConfig.width}
+        height={overlayGradientBackgroundConfig.height}
+      />
+      <Composition
+        id="AETipNowLoadingProgressBar"
+        component={AETipNowLoadingProgressBar}
+        durationInFrames={nowLoadingProgressBarConfig.totalFrames}
+        fps={nowLoadingProgressBarConfig.fps}
+        width={nowLoadingProgressBarConfig.width}
+        height={nowLoadingProgressBarConfig.height}
       />
     </>
   );

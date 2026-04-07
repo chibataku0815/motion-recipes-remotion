@@ -79,6 +79,14 @@ export default defineConfig({
       input: {
         landing: path.resolve(__dirname, "site/index.html"),
         echo: path.resolve(__dirname, "site/recipes/echo-dither-trail/index.html"),
+        overlayGradient: path.resolve(
+          __dirname,
+          "site/recipes/overlay-gradient-background/index.html",
+        ),
+        nowLoading: path.resolve(
+          __dirname,
+          "site/recipes/now-loading-progress-bar/index.html",
+        ),
         trim: path.resolve(
           __dirname,
           "site/recipes/trim-paths-radial-burst/index.html",
