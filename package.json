@@ -19,7 +19,9 @@
     "render:44": "remotion render src/index.ts EchoDitherTrail media/echo-dither-trail/44-preview.mp4 --gl=angle",
     "render:45": "remotion render src/index.ts TrimPathsRadialBurst media/trim-paths-radial-burst/45-preview.mp4 --gl=angle",
     "render:46": "remotion render src/index.ts AETipOverlayGradientBackground media/overlay-gradient-background/46-preview.mp4 --gl=angle",
-    "render:49": "remotion render src/index.ts AETipNowLoadingProgressBar media/now-loading-progress-bar/49-preview.mp4 --gl=angle"
+    "render:48": "remotion render src/index.ts OverlayRingTitleMinimal media/overlay-ring-title-minimal/48-preview.mp4 --gl=angle",
+    "render:49": "remotion render src/index.ts AETipNowLoadingProgressBar media/now-loading-progress-bar/49-preview.mp4 --gl=angle",
+    "render:50": "remotion render src/index.ts OverlayRingTitleAccentBurst media/overlay-ring-title-accent-burst/50-preview.mp4 --gl=angle"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",

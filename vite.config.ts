@@ -83,6 +83,14 @@ export default defineConfig({
           __dirname,
           "site/recipes/overlay-gradient-background/index.html",
         ),
+        overlayRingTitleMinimal: path.resolve(
+          __dirname,
+          "site/recipes/overlay-ring-title-minimal/index.html",
+        ),
+        overlayRingTitleAccentBurst: path.resolve(
+          __dirname,
+          "site/recipes/overlay-ring-title-accent-burst/index.html",
+        ),
         nowLoading: path.resolve(
           __dirname,
           "site/recipes/now-loading-progress-bar/index.html",

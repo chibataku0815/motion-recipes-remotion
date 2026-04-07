@@ -6,7 +6,7 @@ Published gallery site:
 
 - [motion-recipes-remotion](https://chibataku0815.github.io/motion-recipes-remotion/)
 
-This repository is the code and documentation source for that site. It focuses on how small motion ideas can be decomposed into reusable code primitives, parameterized timing, and minimal renderable recipes.
+This repository is the code and documentation source for that site. It focuses on how small motion ideas can be decomposed into reusable code primitives, parameterized timing, minimal renderable recipes, and small combination shots built from those primitives.
 
 ## What this repo is
 
@@ -45,7 +45,9 @@ Render the included recipes:
 bun run render:44
 bun run render:45
 bun run render:46
+bun run render:48
 bun run render:49
+bun run render:50
 ```
 
 ## Recipes
@@ -54,6 +56,8 @@ bun run render:49
 |---|---|---|
 | Echo Dither Trail | [`src/recipes/echo-dither-trail`](./src/recipes/echo-dither-trail) | [`docs/recipes/echo-dither-trail.md`](./docs/recipes/echo-dither-trail.md) |
 | Overlay Gradient Background | [`src/recipes/overlay-gradient-background`](./src/recipes/overlay-gradient-background) | [`docs/recipes/overlay-gradient-background.md`](./docs/recipes/overlay-gradient-background.md) |
+| Overlay Ring Title Minimal | [`src/recipes/overlay-ring-title-minimal`](./src/recipes/overlay-ring-title-minimal) | [`docs/recipes/overlay-ring-title-minimal.md`](./docs/recipes/overlay-ring-title-minimal.md) |
+| Overlay Ring Title Accent Burst | [`src/recipes/overlay-ring-title-accent-burst`](./src/recipes/overlay-ring-title-accent-burst) | [`docs/recipes/overlay-ring-title-accent-burst.md`](./docs/recipes/overlay-ring-title-accent-burst.md) |
 | Now Loading Progress Bar | [`src/recipes/now-loading-progress-bar`](./src/recipes/now-loading-progress-bar) | [`docs/recipes/now-loading-progress-bar.md`](./docs/recipes/now-loading-progress-bar.md) |
 | Trim Paths Radial Burst | [`src/recipes/trim-paths-radial-burst`](./src/recipes/trim-paths-radial-burst) | [`docs/recipes/trim-paths-radial-burst.md`](./docs/recipes/trim-paths-radial-burst.md) |
 

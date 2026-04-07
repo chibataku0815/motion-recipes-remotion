@@ -6,6 +6,10 @@ import { AETipOverlayGradientBackground } from "./recipes/overlay-gradient-backg
 import { config as overlayGradientBackgroundConfig } from "./recipes/overlay-gradient-background/config";
 import { AETipNowLoadingProgressBar } from "./recipes/now-loading-progress-bar/Composition";
 import { config as nowLoadingProgressBarConfig } from "./recipes/now-loading-progress-bar/config";
+import { OverlayRingTitleMinimal } from "./recipes/overlay-ring-title-minimal/Composition";
+import { config as overlayRingTitleMinimalConfig } from "./recipes/overlay-ring-title-minimal/config";
+import { OverlayRingTitleAccentBurst } from "./recipes/overlay-ring-title-accent-burst/Composition";
+import { config as overlayRingTitleAccentBurstConfig } from "./recipes/overlay-ring-title-accent-burst/config";
 import { TrimPathsRadialBurst } from "./recipes/trim-paths-radial-burst/Composition";
 import { config as trimPathsRadialBurstConfig } from "./recipes/trim-paths-radial-burst/config";
 
@@ -43,6 +47,22 @@ export const RemotionRoot: React.FC = () => {
         fps={nowLoadingProgressBarConfig.fps}
         width={nowLoadingProgressBarConfig.width}
         height={nowLoadingProgressBarConfig.height}
+      />
+      <Composition
+        id="OverlayRingTitleMinimal"
+        component={OverlayRingTitleMinimal}
+        durationInFrames={overlayRingTitleMinimalConfig.durationFrames}
+        fps={overlayRingTitleMinimalConfig.fps}
+        width={overlayRingTitleMinimalConfig.width}
+        height={overlayRingTitleMinimalConfig.height}
+      />
+      <Composition
+        id="OverlayRingTitleAccentBurst"
+        component={OverlayRingTitleAccentBurst}
+        durationInFrames={overlayRingTitleAccentBurstConfig.durationFrames}
+        fps={overlayRingTitleAccentBurstConfig.fps}
+        width={overlayRingTitleAccentBurstConfig.width}
+        height={overlayRingTitleAccentBurstConfig.height}
       />
     </>
   );

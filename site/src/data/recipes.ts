@@ -133,6 +133,59 @@ export const recipes: RecipePageData[] = [
     status: "Published",
   },
   {
+    slug: "overlay-ring-title-minimal",
+    title: {
+      en: "Overlay Ring Title Minimal",
+      ja: "Overlay Ring Title Minimal",
+    },
+    tagline: {
+      en: "Subdued gradient stage + expanding ring + late title payoff",
+      ja: "抑えたグラデーション背景 + expanding ring + 遅れて入るタイトル",
+    },
+    technique: {
+      en: "This combination recipe fixes the moving overlay gradient as a background role, then lets a centered ring stack expand and hand off to a short title reveal. The point is not maximal spectacle but proving that background depth and one hero event can already read as a production-like shot.",
+      ja: "この組み合わせレシピでは、動く overlay gradient を背景役に固定し、中央の ring stack が拡張して短いタイトル reveal へ接続します。狙いは派手さの最大化ではなく、背景の奥行きと主役イベント 1 つだけで production-like なショットが成立するかを確かめることです。",
+    },
+    summary: {
+      en: "It turns two previously isolated primitives into a minimal one-shot template and makes the role separation between background, hero, and title explicit.",
+      ja: "個別に検証していた 2 つの primitive を最小 one-shot template に変換し、background / hero / title の役割分担を明示します。",
+    },
+    corePrimitives: [
+      "renderGradientLayer",
+      "getRingProgress",
+      "late title reveal",
+    ],
+    parameters: [
+      "backgroundLayerCount",
+      "backgroundOpacity",
+      "ringCount",
+      "ringStaggerFrames",
+      "ringEndDiameter",
+      "titleDelayFrames",
+      "titleText",
+    ],
+    previewVideoPath: "media/overlay-ring-title-minimal/48-preview.mp4",
+    stillPaths: [
+      "media/overlay-ring-title-minimal/frame-0012.png",
+      "media/overlay-ring-title-minimal/frame-0030.png",
+      "media/overlay-ring-title-minimal/frame-0042.png",
+      "media/overlay-ring-title-minimal/frame-0066.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/overlay-ring-title-minimal`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/overlay-ring-title-minimal.md`,
+    inspiration: {
+      label: {
+        en: "Minimal composite shot derived from two AE-tip studies",
+        ja: "2 つの AE-tip study から組んだ最小 composite shot",
+      },
+      note: {
+        en: "The public page frames this as a primitive-connection test rather than a frame-matched recreation of a single source clip.",
+        ja: "公開ページでは、特定ソースの厳密再現ではなく、primitive の接続テストとして扱っています。",
+      },
+    },
+    status: "Published",
+  },
+  {
     slug: "now-loading-progress-bar",
     title: {
       en: "Now Loading Progress Bar",
@@ -182,6 +235,59 @@ export const recipes: RecipePageData[] = [
       note: {
         en: "The public recipe turns the source workflow into inspectable timing primitives and a comparison board instead of aiming for an exact frame clone.",
         ja: "公開版レシピでは、元ワークフローを厳密再現するのではなく、点検可能な timing primitive と comparison board に変換しています。",
+      },
+    },
+    status: "Published",
+  },
+  {
+    slug: "overlay-ring-title-accent-burst",
+    title: {
+      en: "Overlay Ring Title Accent Burst",
+      ja: "Overlay Ring Title Accent Burst",
+    },
+    tagline: {
+      en: "High-contrast stage + delayed burst accent + title flash payoff",
+      ja: "高コントラスト背景 + 遅れて入る burst accent + title flash payoff",
+    },
+    technique: {
+      en: "This variant keeps the same background-to-hero structure as the minimal shot, but adds a delayed burst phase after the rings settle and before the title lands. The burst is attached to the outer ring instead of becoming a second hero, so the sequence still reads in three steps: ring, burst, title.",
+      ja: "この variant は minimal shot と同じ background-to-hero 構造を維持しつつ、ring が落ち着いた後、title が入る前に delayed burst phase を追加します。burst は第二主役にならないよう outer ring に追従させ、ring, burst, title の 3 段階で読めるようにしています。",
+    },
+    summary: {
+      en: "It shows how the radial-burst primitive can be promoted from a subtle edge reaction into a louder payoff layer without collapsing the shot hierarchy.",
+      ja: "radial-burst primitive を、ショットの階層を壊さずに、弱い edge reaction からより強い payoff layer へ押し上げる例です。",
+    },
+    corePrimitives: [
+      "renderGradientLayer",
+      "getRingProgress",
+      "getTrimWindow",
+      "burst flash overlays",
+    ],
+    parameters: [
+      "accentLineAnglesDeg",
+      "accentLineStaggerFrames",
+      "accentStrokeLength",
+      "accentOpacity",
+      "burstFlashRadius",
+      "titleDelayFrames",
+      "titleFontSize",
+    ],
+    previewVideoPath: "media/overlay-ring-title-accent-burst/50-preview.mp4",
+    stillPaths: [
+      "media/overlay-ring-title-accent-burst/frame-0034.png",
+      "media/overlay-ring-title-accent-burst/frame-0062.png",
+      "media/overlay-ring-title-accent-burst/frame-0076.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/overlay-ring-title-accent-burst`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/overlay-ring-title-accent-burst.md`,
+    inspiration: {
+      label: {
+        en: "Composite shot built from overlay gradient, expanding ring, and radial burst studies",
+        ja: "overlay gradient, expanding ring, radial burst の複合 shot",
+      },
+      note: {
+        en: "This public recipe documents the loud variant that came after validating the quieter minimal connection test.",
+        ja: "この公開レシピは、静かな最小接続テストを検証した後に作った、より強い variant を記録しています。",
       },
     },
     status: "Published",
