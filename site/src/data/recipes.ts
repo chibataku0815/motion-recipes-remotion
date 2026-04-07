@@ -28,6 +28,122 @@ const repoRoot = "https://github.com/chibataku0815/motion-recipes-remotion";
 
 export const recipes: RecipePageData[] = [
   {
+    slug: "text-path-morphing",
+    title: {
+      en: "Text Path Morphing",
+      ja: "Text Path Morphing",
+    },
+    tagline: {
+      en: "Path-to-path word morph + support geometry fallback + print-poster texture",
+      ja: "path-to-path word morph + support geometry fallback + print poster texture",
+    },
+    technique: {
+      en: "This recipe treats word replacement as contour interpolation. Fixed slots morph from `BIG` to `MEDIUM` to `SMALL`, and slots with no matching next letter pass through support geometry so the motion still reads as reshaping outlines rather than disappearing characters.",
+      ja: "このレシピでは、単語の切り替えを輪郭補間として扱います。固定 slot が `BIG` から `MEDIUM`、さらに `SMALL` へ変形し、対応先のない slot は support geometry を経由することで、文字が消えるのではなく輪郭が組み替わっているように読ませます。",
+    },
+    summary: {
+      en: "It combines slot-based glyph interpolation, support-shape fallback, and neo-brutalist editorial texture so a text morph can stay typographic instead of becoming a blur dissolve or liquid goo.",
+      ja: "slot ごとの glyph interpolation、support shape fallback、neo-brutalist editorial texture を組み合わせ、text morph が blur dissolve や liquid goo に落ちず、タイポグラフィとして保たれるようにしています。",
+    },
+    corePrimitives: [
+      "getTimelineState",
+      "getChannelMorphState",
+      "slot-based support geometry fallback",
+      "editorial poster texture stack",
+    ],
+    parameters: [
+      "holdFrames",
+      "morphFrames",
+      "channelStaggerFrames",
+      "channelCount",
+      "letterSpacing",
+      "ghostScale",
+      "halftoneDotSize",
+      "halftoneOpacity",
+      "dustCount",
+      "dirtCount",
+    ],
+    previewVideoPath: "media/text-path-morphing/57-preview.mp4",
+    stillPaths: [
+      "media/text-path-morphing/frame-036.png",
+      "media/text-path-morphing/frame-060.png",
+      "media/text-path-morphing/frame-090.png",
+      "media/text-path-morphing/frame-144.png",
+      "media/text-path-morphing/frame-162.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/text-path-morphing`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/text-path-morphing.md`,
+    inspiration: {
+      label: {
+        en: "Short-form AE tip about morphing one text word into another through shape paths",
+        ja: "shape path で単語同士を変形させる AE 系ショート tip",
+      },
+      url: "https://www.youtube.com/shorts/uUW6akpwNJk",
+      note: {
+        en: "The public recipe preserves the contour-morph logic and easy-eased timing read, but packages it as a modular poster study with a compact display alphabet instead of source-matched font outlines.",
+        ja: "公開版レシピは、輪郭 morph のロジックと easy ease 的な読みを維持しつつ、ソースの font outline 完全再現ではなく、簡略 display alphabet を使う modular poster study として再構成しています。",
+      },
+    },
+    status: "Published",
+  },
+  {
+    slug: "echo-text-train",
+    title: {
+      en: "Echo Text Train",
+      ja: "Echo Text Train",
+    },
+    tagline: {
+      en: "Composite-in-front text echo + curved 2.5D path + editorial poster framing",
+      ja: "前面合成の text echo + 曲線 2.5D path + editorial poster 構成",
+    },
+    technique: {
+      en: "A single headline word moves from depth toward the viewer while older sampled positions trail behind it. The shot packages that echo logic inside a neo-brutalist editorial poster layout so the technique reads as a designed motion object, not just a trail effect.",
+      ja: "単一の headline word が奥から手前へ進み、その過去 sample が後続列として追従します。このページでは、その echo ロジックを neo-brutalist editorial poster layout の中に入れ、単なるトレイルではなく設計された motion object として読めるようにしています。",
+    },
+    summary: {
+      en: "This recipe treats temporal duplication, curved 2.5D travel, front-most compositing, and design-block staging as one system instead of separate polish layers.",
+      ja: "このレシピでは、時間方向の複製、曲線 2.5D 移動、前面 compositing、design block staging を別々の polish ではなく 1 つのシステムとして扱います。",
+    },
+    corePrimitives: [
+      "getTemporalEchoSamples",
+      "getEchoTrainState",
+      "hero-stage safety padding",
+      "editorial comparison layout",
+    ],
+    parameters: [
+      "depthStart",
+      "depthEnd",
+      "waveAmplitude",
+      "waveFrequency",
+      "lateralWobble",
+      "echoCount",
+      "echoStepFrames",
+      "echoDecay",
+      "safePaddingRight",
+    ],
+    previewVideoPath: "media/echo-text-train/56-preview.mp4",
+    stillPaths: [
+      "media/echo-text-train/frame-018.png",
+      "media/echo-text-train/frame-072.png",
+      "media/echo-text-train/frame-126.png",
+      "media/echo-text-train/frame-203.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/echo-text-train`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/echo-text-train.md`,
+    inspiration: {
+      label: {
+        en: "AE-style short tip about text echo trailing behind a leading word",
+        ja: "先頭テキストの後ろに残像列が追従する AE 系ショート tip",
+      },
+      url: "https://www.youtube.com/shorts/DqybqgGghUI",
+      note: {
+        en: "The public recipe keeps the one-object echo logic and curved depth motion, but reframes the result as an inspectable poster study rather than a source-matched clone.",
+        ja: "公開版レシピは、1 object の echo ロジックと曲線 depth motion を維持しつつ、ソース完全再現ではなく inspectable な poster study として再構成しています。",
+      },
+    },
+    status: "Published",
+  },
+  {
     slug: "echo-dither-trail",
     title: {
       en: "Echo Dither Trail",

@@ -10,6 +10,10 @@ import { OverlayRingTitleMinimal } from "./recipes/overlay-ring-title-minimal/Co
 import { config as overlayRingTitleMinimalConfig } from "./recipes/overlay-ring-title-minimal/config";
 import { OverlayRingTitleAccentBurst } from "./recipes/overlay-ring-title-accent-burst/Composition";
 import { config as overlayRingTitleAccentBurstConfig } from "./recipes/overlay-ring-title-accent-burst/config";
+import { AETipEchoTextTrain } from "./recipes/echo-text-train/Composition";
+import { config as echoTextTrainConfig } from "./recipes/echo-text-train/config";
+import { AETipTextPathMorphing } from "./recipes/text-path-morphing/Composition";
+import { config as textPathMorphingConfig } from "./recipes/text-path-morphing/config";
 import { TrimPathsRadialBurst } from "./recipes/trim-paths-radial-burst/Composition";
 import { config as trimPathsRadialBurstConfig } from "./recipes/trim-paths-radial-burst/config";
 
@@ -63,6 +67,22 @@ export const RemotionRoot: React.FC = () => {
         fps={overlayRingTitleAccentBurstConfig.fps}
         width={overlayRingTitleAccentBurstConfig.width}
         height={overlayRingTitleAccentBurstConfig.height}
+      />
+      <Composition
+        id="AETipEchoTextTrain"
+        component={AETipEchoTextTrain}
+        durationInFrames={echoTextTrainConfig.totalFrames}
+        fps={echoTextTrainConfig.fps}
+        width={echoTextTrainConfig.width}
+        height={echoTextTrainConfig.height}
+      />
+      <Composition
+        id="AETipTextPathMorphing"
+        component={AETipTextPathMorphing}
+        durationInFrames={textPathMorphingConfig.totalFrames}
+        fps={textPathMorphingConfig.fps}
+        width={textPathMorphingConfig.width}
+        height={textPathMorphingConfig.height}
       />
     </>
   );

@@ -10,7 +10,7 @@ This repository is the code and documentation source for that site. It focuses o
 
 ## What this repo is
 
-- A compact Remotion app with four standalone motion recipes
+- A compact Remotion app with standalone motion recipes
 - A GitHub Pages gallery for browsing previews and technique summaries
 - A public-facing subset extracted from a larger private R&D environment
 - An educational exploration of technique translation, not template redistribution
@@ -48,13 +48,17 @@ bun run render:46
 bun run render:48
 bun run render:49
 bun run render:50
+bun run render:56
+bun run render:57
 ```
 
 ## Recipes
 
 | Recipe | Code | Doc |
 |---|---|---|
+| Text Path Morphing | [`src/recipes/text-path-morphing`](./src/recipes/text-path-morphing) | [`docs/recipes/text-path-morphing.md`](./docs/recipes/text-path-morphing.md) |
 | Echo Dither Trail | [`src/recipes/echo-dither-trail`](./src/recipes/echo-dither-trail) | [`docs/recipes/echo-dither-trail.md`](./docs/recipes/echo-dither-trail.md) |
+| Echo Text Train | [`src/recipes/echo-text-train`](./src/recipes/echo-text-train) | [`docs/recipes/echo-text-train.md`](./docs/recipes/echo-text-train.md) |
 | Overlay Gradient Background | [`src/recipes/overlay-gradient-background`](./src/recipes/overlay-gradient-background) | [`docs/recipes/overlay-gradient-background.md`](./docs/recipes/overlay-gradient-background.md) |
 | Overlay Ring Title Minimal | [`src/recipes/overlay-ring-title-minimal`](./src/recipes/overlay-ring-title-minimal) | [`docs/recipes/overlay-ring-title-minimal.md`](./docs/recipes/overlay-ring-title-minimal.md) |
 | Overlay Ring Title Accent Burst | [`src/recipes/overlay-ring-title-accent-burst`](./src/recipes/overlay-ring-title-accent-burst) | [`docs/recipes/overlay-ring-title-accent-burst.md`](./docs/recipes/overlay-ring-title-accent-burst.md) |
