@@ -22,21 +22,27 @@
     "render:48": "remotion render src/index.ts OverlayRingTitleMinimal media/overlay-ring-title-minimal/48-preview.mp4 --gl=angle",
     "render:49": "remotion render src/index.ts AETipNowLoadingProgressBar media/now-loading-progress-bar/49-preview.mp4 --gl=angle",
     "render:50": "remotion render src/index.ts OverlayRingTitleAccentBurst media/overlay-ring-title-accent-burst/50-preview.mp4 --gl=angle",
+    "render:55": "remotion render src/index.ts AETipStickyMetaballBridge media/sticky-metaball-bridge/55-preview.mp4 --gl=angle",
     "render:56": "remotion render src/index.ts AETipEchoTextTrain media/echo-text-train/56-preview.mp4 --gl=angle",
     "render:57": "remotion render src/index.ts AETipTextPathMorphing media/text-path-morphing/57-preview.mp4 --gl=angle",
     "render:58": "remotion render src/index.ts AETipBubblePopSilhouetteBurst media/bubble-pop-silhouette-burst/58-preview.mp4 --gl=angle"
   },
   "dependencies": {
+    "@react-three/drei": "10.7.7",
+    "@react-three/fiber": "9.4.2",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/themes": "^3.3.0",
     "@remotion/cli": "4.0.441",
+    "@remotion/three": "4.0.441",
     "flubber": "^0.4.2",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "remotion": "4.0.441"
+    "remotion": "4.0.441",
+    "three": "0.181.2"
   },
   "devDependencies": {
     "@types/flubber": "^0.4.0",
+    "@types/three": "0.181.0",
     "@vitejs/plugin-react": "^5.1.0",
     "@types/node": "^22.10.2",
     "@types/react": "^19",

@@ -99,6 +99,10 @@ export default defineConfig({
           __dirname,
           "site/recipes/now-loading-progress-bar/index.html",
         ),
+        stickyMetaballBridge: path.resolve(
+          __dirname,
+          "site/recipes/sticky-metaball-bridge/index.html",
+        ),
         trim: path.resolve(
           __dirname,
           "site/recipes/trim-paths-radial-burst/index.html",

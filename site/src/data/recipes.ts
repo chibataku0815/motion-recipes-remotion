@@ -84,6 +84,61 @@ export const recipes: RecipePageData[] = [
     status: "Published",
   },
   {
+    slug: "sticky-metaball-bridge",
+    title: {
+      en: "Sticky Metaball Bridge",
+      ja: "Sticky Metaball Bridge",
+    },
+    tagline: {
+      en: "WebGL metaball field + flattened editorial shading + neo-brutalist poster framing",
+      ja: "WebGL metaball field + flattened editorial shading + neo-brutalist poster framing",
+    },
+    technique: {
+      en: "Two circles are combined through a WebGL metaball field so a liquid neck appears only when they approach. The final shot keeps the effect core in shader space, but flattens the surface read into an editorial poster object instead of a glossy 3D demo.",
+      ja: "2つの circle を WebGL の metaball field で結合し、接近したときだけ液体的な neck が現れるようにしています。effect core は shader 側で持ちつつ、最終の見えは glossy 3D demo ではなく editorial poster object に flatten しています。",
+    },
+    summary: {
+      en: "This recipe separates fluid union, distance-driven bridge timing, flattened shading, and poster-stage composition so sticky motion can stay readable without turning into generic blob art.",
+      ja: "このレシピでは、fluid union、距離駆動の bridge timing、flattened shading、poster-stage composition を分離し、sticky motion が generic blob art に崩れず読めるようにしています。",
+    },
+    corePrimitives: [
+      "sceneSdf",
+      "smooth-union metaball bridge control",
+      "flattened editorial shading stack",
+      "specimen-stage isolation",
+    ],
+    parameters: [
+      "farDistance",
+      "tightDistance",
+      "stretchDistance",
+      "bridgeBreakDistance",
+      "uSeparation",
+      "uSmoothness",
+      "uBridge",
+      "outlineWidth",
+    ],
+    previewVideoPath: "media/sticky-metaball-bridge/55-preview.mp4",
+    stillPaths: [
+      "media/sticky-metaball-bridge/frame-090.png",
+      "media/sticky-metaball-bridge/frame-132.png",
+      "media/sticky-metaball-bridge/frame-165.png",
+    ],
+    githubCodeUrl: `${repoRoot}/tree/main/src/recipes/sticky-metaball-bridge`,
+    githubDocUrl: `${repoRoot}/blob/main/docs/recipes/sticky-metaball-bridge.md`,
+    inspiration: {
+      label: {
+        en: "AE-style short tip about sticky circles and metaball-like bridge motion",
+        ja: "sticky circles と metaball-like bridge motion を扱う AE 系ショート tip",
+      },
+      url: "https://www.youtube.com/shorts/J33SutcnpaU",
+      note: {
+        en: "The public recipe preserves the sticky neck read and merge / peel timing, but intentionally flattens the object appearance so the result stays aligned with the editorial poster system.",
+        ja: "公開版レシピは、sticky neck の読みと merge / peel timing を維持しつつ、object の見えは意図的に flatten して editorial poster system に合わせています。",
+      },
+    },
+    status: "Published",
+  },
+  {
     slug: "text-path-morphing",
     title: {
       en: "Text Path Morphing",

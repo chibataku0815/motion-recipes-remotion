@@ -48,6 +48,7 @@ bun run render:46
 bun run render:48
 bun run render:49
 bun run render:50
+bun run render:55
 bun run render:56
 bun run render:57
 bun run render:58
@@ -60,6 +61,7 @@ bun run render:58
 | Text Path Morphing | [`src/recipes/text-path-morphing`](./src/recipes/text-path-morphing) | [`docs/recipes/text-path-morphing.md`](./docs/recipes/text-path-morphing.md) |
 | Bubble Pop Silhouette Burst | [`src/recipes/bubble-pop-silhouette-burst`](./src/recipes/bubble-pop-silhouette-burst) | [`docs/recipes/bubble-pop-silhouette-burst.md`](./docs/recipes/bubble-pop-silhouette-burst.md) |
 | Echo Dither Trail | [`src/recipes/echo-dither-trail`](./src/recipes/echo-dither-trail) | [`docs/recipes/echo-dither-trail.md`](./docs/recipes/echo-dither-trail.md) |
+| Sticky Metaball Bridge | [`src/recipes/sticky-metaball-bridge`](./src/recipes/sticky-metaball-bridge) | [`docs/recipes/sticky-metaball-bridge.md`](./docs/recipes/sticky-metaball-bridge.md) |
 | Echo Text Train | [`src/recipes/echo-text-train`](./src/recipes/echo-text-train) | [`docs/recipes/echo-text-train.md`](./docs/recipes/echo-text-train.md) |
 | Overlay Gradient Background | [`src/recipes/overlay-gradient-background`](./src/recipes/overlay-gradient-background) | [`docs/recipes/overlay-gradient-background.md`](./docs/recipes/overlay-gradient-background.md) |
 | Overlay Ring Title Minimal | [`src/recipes/overlay-ring-title-minimal`](./src/recipes/overlay-ring-title-minimal) | [`docs/recipes/overlay-ring-title-minimal.md`](./docs/recipes/overlay-ring-title-minimal.md) |

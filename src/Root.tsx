@@ -10,6 +10,8 @@ import { OverlayRingTitleMinimal } from "./recipes/overlay-ring-title-minimal/Co
 import { config as overlayRingTitleMinimalConfig } from "./recipes/overlay-ring-title-minimal/config";
 import { OverlayRingTitleAccentBurst } from "./recipes/overlay-ring-title-accent-burst/Composition";
 import { config as overlayRingTitleAccentBurstConfig } from "./recipes/overlay-ring-title-accent-burst/config";
+import { AETipStickyMetaballBridge } from "./recipes/sticky-metaball-bridge/Composition";
+import { config as stickyMetaballBridgeConfig } from "./recipes/sticky-metaball-bridge/config";
 import { AETipEchoTextTrain } from "./recipes/echo-text-train/Composition";
 import { config as echoTextTrainConfig } from "./recipes/echo-text-train/config";
 import { AETipTextPathMorphing } from "./recipes/text-path-morphing/Composition";
@@ -69,6 +71,14 @@ export const RemotionRoot: React.FC = () => {
         fps={overlayRingTitleAccentBurstConfig.fps}
         width={overlayRingTitleAccentBurstConfig.width}
         height={overlayRingTitleAccentBurstConfig.height}
+      />
+      <Composition
+        id="AETipStickyMetaballBridge"
+        component={AETipStickyMetaballBridge}
+        durationInFrames={stickyMetaballBridgeConfig.totalFrames}
+        fps={stickyMetaballBridgeConfig.fps}
+        width={stickyMetaballBridgeConfig.width}
+        height={stickyMetaballBridgeConfig.height}
       />
       <Composition
         id="AETipEchoTextTrain"
