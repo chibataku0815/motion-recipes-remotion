@@ -1,0 +1,31 @@
+{
+  "name": "motion-recipes-remotion",
+  "version": "0.1.0",
+  "private": false,
+  "homepage": "https://github.com/chibataku0815/motion-recipes-remotion",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chibataku0815/motion-recipes-remotion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chibataku0815/motion-recipes-remotion/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "remotion studio",
+    "render:44": "remotion render src/index.ts EchoDitherTrail media/echo-dither-trail/44-preview.mp4 --gl=angle",
+    "render:45": "remotion render src/index.ts TrimPathsRadialBurst media/trim-paths-radial-burst/45-preview.mp4 --gl=angle"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.441",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "remotion": "4.0.441"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5.7.2"
+  }
+}
