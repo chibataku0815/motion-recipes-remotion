@@ -1,17 +1,19 @@
+import type { LocalizedText } from "../i18n";
+
 export type RecipeStatus = "Published" | "In Progress";
 
 export type RecipeInspiration = {
-  label: string;
+  label: LocalizedText;
   url?: string;
-  note: string;
+  note: LocalizedText;
 };
 
 export type RecipePageData = {
   slug: string;
-  title: string;
-  tagline: string;
-  technique: string;
-  summary: string;
+  title: LocalizedText;
+  tagline: LocalizedText;
+  technique: LocalizedText;
+  summary: LocalizedText;
   corePrimitives: string[];
   parameters: string[];
   previewVideoPath: string;
@@ -27,12 +29,22 @@ const repoRoot = "https://github.com/chibataku0815/motion-recipes-remotion";
 export const recipes: RecipePageData[] = [
   {
     slug: "echo-dither-trail",
-    title: "Echo Dither Trail",
-    tagline: "Temporal duplication + rough alpha texture",
-    technique:
-      "A moving square leaves a sampled echo trail. The left side stays smooth, while the right side pushes the same alpha accumulation through ordered dither.",
-    summary:
-      "This study separates trail creation from trail compositing so the motion smear and the roughened texture can be reasoned about independently.",
+    title: {
+      en: "Echo Dither Trail",
+      ja: "Echo Dither Trail",
+    },
+    tagline: {
+      en: "Temporal duplication + rough alpha texture",
+      ja: "時間方向の複製 + 粗いアルファテクスチャ",
+    },
+    technique: {
+      en: "A moving square leaves a sampled echo trail. The left side stays smooth, while the right side pushes the same alpha accumulation through ordered dither.",
+      ja: "移動する四角形がサンプル化された残像トレイルを残します。左側は滑らかなまま、右側は同じアルファ蓄積を ordered dither に通して粗い質感に変えています。",
+    },
+    summary: {
+      en: "This study separates trail creation from trail compositing so the motion smear and the roughened texture can be reasoned about independently.",
+      ja: "このスタディでは、トレイル生成とトレイル合成を分離し、モーションの残像感と粗いテクスチャを別々に考えられるようにしています。",
+    },
     corePrimitives: [
       "getTemporalEchoSamples",
       "applyOrderedDither",
@@ -56,20 +68,35 @@ export const recipes: RecipePageData[] = [
     githubCodeUrl: `${repoRoot}/tree/main/src/recipes/echo-dither-trail`,
     githubDocUrl: `${repoRoot}/blob/main/docs/recipes/echo-dither-trail.md`,
     inspiration: {
-      label: "Short-form motion tip from private implementation notes",
-      note:
-        "The exact source URL was not retained, so this page frames the work as a technique study instead of a source-specific recreation.",
+      label: {
+        en: "Short-form motion tip from private implementation notes",
+        ja: "私的な実装メモに残っていたショート形式のモーション tip",
+      },
+      note: {
+        en: "The exact source URL was not retained, so this page frames the work as a technique study instead of a source-specific recreation.",
+        ja: "正確な参照元 URL が残っていないため、このページでは特定ソースの再現ではなく、技法スタディとして位置づけています。",
+      },
     },
     status: "Published",
   },
   {
     slug: "trim-paths-radial-burst",
-    title: "Trim Paths Radial Burst",
-    tagline: "Traveling segment + radial symmetry + eased mid-speed",
-    technique:
-      "A line is drawn, erased with delay, and duplicated into a six-spoke burst. The page contrasts linear timing with an AE-like eased variant before showing the final arrangement.",
-    summary:
-      "This recipe isolates draw-on, delayed erase-on, and equal-angle radial layout so the burst reads as a moving segment rather than a scale trick.",
+    title: {
+      en: "Trim Paths Radial Burst",
+      ja: "Trim Paths Radial Burst",
+    },
+    tagline: {
+      en: "Traveling segment + radial symmetry + eased mid-speed",
+      ja: "移動するセグメント + 放射対称 + 中速域のイージング",
+    },
+    technique: {
+      en: "A line is drawn, erased with delay, and duplicated into a six-spoke burst. The page contrasts linear timing with an AE-like eased variant before showing the final arrangement.",
+      ja: "一本の線を描き、遅れて消し、その挙動を6本スポークの放射バーストへ複製します。このページでは、最終配置を見る前に、線形タイミングと AE らしいイージング版を対比しています。",
+    },
+    summary: {
+      en: "This recipe isolates draw-on, delayed erase-on, and equal-angle radial layout so the burst reads as a moving segment rather than a scale trick.",
+      ja: "このレシピでは、描画開始、遅延付きの消去、等角度の放射レイアウトを分離し、単なるスケール変化ではなく移動するセグメントとして読めるようにしています。",
+    },
     corePrimitives: [
       "getTrimWindow",
       "getSpokeAngles",
@@ -94,10 +121,15 @@ export const recipes: RecipePageData[] = [
     githubCodeUrl: `${repoRoot}/tree/main/src/recipes/trim-paths-radial-burst`,
     githubDocUrl: `${repoRoot}/blob/main/docs/recipes/trim-paths-radial-burst.md`,
     inspiration: {
-      label: "Short-form motion tip referenced in private notes",
+      label: {
+        en: "Short-form motion tip referenced in private notes",
+        ja: "私的メモで参照していたショート形式のモーション tip",
+      },
       url: "https://youtube.com/shorts/wLknsvLI2b8?si=o-87fQKMb_OtasXS",
-      note:
-        "The public recipe uses an AE-like timing approximation and a cleaner SVG rendering than the source workflow.",
+      note: {
+        en: "The public recipe uses an AE-like timing approximation and a cleaner SVG rendering than the source workflow.",
+        ja: "公開版レシピでは、元ワークフローよりも AE ライクなタイミング近似と、より整理された SVG レンダリングを使っています。",
+      },
     },
     status: "Published",
   },

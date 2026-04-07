@@ -20,6 +20,8 @@
     "render:45": "remotion render src/index.ts TrimPathsRadialBurst media/trim-paths-radial-burst/45-preview.mp4 --gl=angle"
   },
   "dependencies": {
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/themes": "^3.3.0",
     "@remotion/cli": "4.0.441",
     "react": "19.2.1",
     "react-dom": "19.2.1",

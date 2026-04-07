@@ -1,82 +1,188 @@
+import {
+  AspectRatio,
+  Badge,
+  Button,
+  Card,
+  Flex,
+  Grid,
+  Heading,
+  Inset,
+  Section,
+  Text,
+} from "@radix-ui/themes";
+import { ThickChevronRightIcon } from "@radix-ui/themes";
+import {
+  getSiteTitle,
+  getStatusLabel,
+  landingContextPanels,
+  landingCopy,
+} from "../copy";
 import { recipes } from "../data/recipes";
-import { SiteShell, withBase } from "./SiteShell";
+import { pickLocalizedText, useLocale } from "../i18n";
+import { PageMetadata } from "../metadata";
+import { SiteShell, docsUrl, repoUrl, withBase } from "./SiteShell";
 
 export const LandingPage = () => {
-  return (
-    <SiteShell
-      eyebrow="GitHub Pages Gallery"
-      title="Motion studies that stay readable."
-      summary="Gallery-first previews for short motion techniques translated into Remotion. Browse the motion first, then drop into code and technical notes only when you need depth."
-      actions={
-        <>
-          <a className="button" href="https://github.com/chibataku0815/motion-recipes-remotion">
-            Open repository
-          </a>
-          <a className="button-secondary" href="https://github.com/chibataku0815/motion-recipes-remotion/tree/main/docs/recipes">
-            Read technical docs
-          </a>
-        </>
-      }
-    >
-      <section className="section">
-        <div className="section-header">
-          <div>
-            <h2>Recipes</h2>
-            <p className="lede">
-              Still-first cards keep the index scannable. Each recipe detail page
-              carries the main video, stills, parameter list, and direct GitHub links.
-            </p>
-          </div>
-        </div>
-        <div className="recipe-grid">
-          {recipes.map((recipe) => (
-            <a
-              key={recipe.slug}
-              className="recipe-card"
-              href={withBase(`recipes/${recipe.slug}/`)}
-            >
-              <img
-                alt={`${recipe.title} still`}
-                src={withBase(recipe.stillPaths[1] ?? recipe.stillPaths[0])}
-              />
-              <div className="card-body">
-                <div className="card-topline">
-                  <span className="status-pill">{recipe.status}</span>
-                  <span>{recipe.slug}</span>
-                </div>
-                <h3>{recipe.title}</h3>
-                <p>{recipe.tagline}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+  const { locale } = useLocale();
+  const publishedCount = recipes.filter(
+    (recipe) => recipe.status === "Published",
+  ).length;
 
-      <section className="section">
-        <div className="insight-grid">
-          <article className="insight-panel">
-            <h3>Why this exists</h3>
-            <p className="body-copy">
-              This repo is not a template dump. Each study isolates one motion
-              idea, one rendering choice, and one set of reusable parameters.
-            </p>
-          </article>
-          <article className="insight-panel">
-            <h3>What stays in the repo</h3>
-            <p className="body-copy">
-              Full code, technical docs, and rendered previews stay in GitHub.
-              The site exists to make the browsing experience legible.
-            </p>
-          </article>
-          <article className="insight-panel">
-            <h3>What stays out</h3>
-            <p className="body-copy">
-              No source-frame comparison boards, no original project files, and
-              no redistribution of proprietary assets from source tutorials.
-            </p>
-          </article>
-        </div>
-      </section>
-    </SiteShell>
+  return (
+    <>
+      <PageMetadata
+        title={getSiteTitle(pickLocalizedText(locale, landingCopy.metadataTitle))}
+        description={pickLocalizedText(locale, landingCopy.metadataDescription)}
+      />
+      <SiteShell
+        eyebrow={pickLocalizedText(locale, landingCopy.eyebrow)}
+        title={pickLocalizedText(locale, landingCopy.title)}
+        summary={pickLocalizedText(locale, landingCopy.summary)}
+        meta={
+          <>
+            <Badge radius="small" variant="soft" color="gray" highContrast>
+              {publishedCount} {pickLocalizedText(locale, landingCopy.metaPublished)}
+            </Badge>
+            <Badge radius="small" variant="soft" color="gray" highContrast>
+              {pickLocalizedText(locale, landingCopy.metaStillFirst)}
+            </Badge>
+            <Badge radius="small" variant="soft" color="gray" highContrast>
+              {pickLocalizedText(locale, landingCopy.metaStaticPages)}
+            </Badge>
+          </>
+        }
+        actions={
+          <>
+            <Button asChild size="3" radius="small" variant="solid">
+              <a href={repoUrl}>{pickLocalizedText(locale, landingCopy.actionRepo)}</a>
+            </Button>
+            <Button asChild size="3" radius="small" variant="soft" color="gray">
+              <a href={docsUrl}>{pickLocalizedText(locale, landingCopy.actionDocs)}</a>
+            </Button>
+          </>
+        }
+      >
+      <Section size={{ initial: "1", sm: "2" }} className="section section--recipes">
+        <Flex
+          className="section-header"
+          direction={{ initial: "column", md: "row" }}
+          align={{ initial: "start", md: "end" }}
+          justify="between"
+          gap="6"
+        >
+          <div>
+            <Text as="p" className="section-label">
+              {pickLocalizedText(locale, landingCopy.sectionGallery)}
+            </Text>
+            <Heading as="h2" className="section-title">
+              {pickLocalizedText(locale, landingCopy.sectionBrowseTitle)}
+            </Heading>
+          </div>
+          <Text as="p" className="section-lede">
+            {pickLocalizedText(locale, landingCopy.sectionBrowseLede)}
+          </Text>
+        </Flex>
+        <Grid className="recipe-grid" columns={{ initial: "1", sm: "2" }} gap={{ initial: "4", sm: "6" }}>
+          {recipes.map((recipe) => (
+            <Card
+              key={recipe.slug}
+              asChild
+              className="recipe-card"
+              size="3"
+              variant="surface"
+            >
+              <a href={withBase(`recipes/${recipe.slug}/`)}>
+                <Inset clip="padding-box" side="top" pb="current">
+                  <AspectRatio ratio={16 / 10} className="recipe-card-media">
+                    <img
+                      alt={`${pickLocalizedText(locale, recipe.title)} still`}
+                      loading="lazy"
+                      src={withBase(recipe.stillPaths[1] ?? recipe.stillPaths[0])}
+                    />
+                  </AspectRatio>
+                </Inset>
+                <Flex className="recipe-card-body" direction="column" gap="4">
+                  <Flex className="recipe-card-meta" align="center" gap="3" wrap="wrap">
+                    <Badge radius="small" variant="soft">
+                      {getStatusLabel(recipe.status, locale)}
+                    </Badge>
+                    <Text as="span" className="mono-label">
+                      {recipe.slug}
+                    </Text>
+                  </Flex>
+                  <Heading as="h3" className="recipe-card-title">
+                    {pickLocalizedText(locale, recipe.title)}
+                  </Heading>
+                  <Text as="p" className="recipe-card-tagline">
+                    {pickLocalizedText(locale, recipe.tagline)}
+                  </Text>
+                  <Text as="p" className="recipe-card-summary">
+                    {pickLocalizedText(locale, recipe.summary)}
+                  </Text>
+                  <Flex
+                    className="recipe-card-footer"
+                    align="center"
+                    justify="between"
+                    mt="auto"
+                  >
+                    <Text as="span">{pickLocalizedText(locale, landingCopy.cardOpen)}</Text>
+                    <ThickChevronRightIcon />
+                  </Flex>
+                </Flex>
+              </a>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+
+      <Section size={{ initial: "1", sm: "2" }} className="section section--supporting">
+        <Flex
+          className="section-header"
+          direction={{ initial: "column", md: "row" }}
+          align={{ initial: "start", md: "end" }}
+          justify="between"
+          gap="6"
+        >
+          <div>
+            <Text as="p" className="section-label">
+              {pickLocalizedText(locale, landingCopy.sectionContext)}
+            </Text>
+            <Heading as="h2" className="section-title">
+              {pickLocalizedText(locale, landingCopy.sectionContextTitle)}
+            </Heading>
+          </div>
+          <Text as="p" className="section-lede">
+            {pickLocalizedText(locale, landingCopy.sectionContextLede)}
+          </Text>
+        </Flex>
+        <Grid
+          className="support-grid"
+          columns={{ initial: "1", sm: "2", lg: "3" }}
+          gap={{ initial: "4", sm: "6" }}
+        >
+          {landingContextPanels.map((panel) => (
+            <Card
+              key={panel.label.en}
+              className="support-panel"
+              size="3"
+              variant="surface"
+            >
+              <Flex direction="column" gap="4">
+                <Text as="p" className="panel-label">
+                  {pickLocalizedText(locale, panel.label)}
+                </Text>
+                <Heading as="h3" className="panel-title">
+                  {pickLocalizedText(locale, panel.title)}
+                </Heading>
+                <Text as="p" className="panel-copy">
+                  {pickLocalizedText(locale, panel.copy)}
+                </Text>
+              </Flex>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+      </SiteShell>
+    </>
   );
 };
