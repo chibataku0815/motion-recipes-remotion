@@ -32,11 +32,12 @@ It is also useful because it compares a single layer against a stacked version, 
 - `angleStepDeg`
 - `distortAmount`
 - `distortSize`
-- `layerPresence`
 
 ## What differs from the source inspiration
 
 The public recipe focuses on inspectable layered motion logic rather than reproducing exact AE plugin output or full finishing nuance. It uses a lightweight raster warp and a comparison board so the moving gradient behavior can be reasoned about in code.
+
+That comparison layout is intentional: the left side keeps the primitive exposed, while the right side shows when stacked layers start producing the denser color depth that makes the technique useful in real shots.
 
 ## Render command
 
@@ -47,4 +48,4 @@ bun run render:46
 ## Inspiration
 
 - Creator attribution: AE tip study translated from private implementation notes
-- Source URL: not published here as a frame-matching recreation; this page presents the result as a technique study of moving layered gradients
+- Source URL: https://www.youtube.com/watch?v=iyoNKImbmTw
